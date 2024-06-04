@@ -1,0 +1,85 @@
+
+.cFlag{
+    height: 30px;
+    width: 40px;
+}
+
+.converter-container {
+    max-width: 80%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 6em;
+}
+
+#currCaption{
+    color: #4B5563;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    margin-top: 20px;
+}
+
+.converter-container h1{
+    color: #030712;
+    font-family: "Aeonik TRIAL";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px; /* 112.5% */
+    text-align: center;
+    margin: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select, input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin: 0;
+}
+
+#error {
+    color: red;
+    font-weight: bold;
+    margin-top: 8px; /* Add some spacing for better separation */
+}
+
+#conversionMenu{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    border-radius: 8px;
+    background: var(--Light-Backgrounds-bg-base, #FFF);
+    padding: 50px;
+
+    /* Light/Elevation/modal */
+    box-shadow: 0px 2px 24px 0px rgba(3, 7, 18, 0.08), 0px 16px 32px 0px rgba(3, 7, 18, 0.08), 0px 0px 0px 1px rgba(3, 7, 18, 0.08), 0px 0px 0px 2px rgba(229, 231, 235, 0.40) inset, 0px 0px 0px 1px #FFF inset;
+}
+
+#currContent{
+    display: flex;
+    gap: 80px;
+}
+
+#srcCurr, #destCurr{
+    width: 50%;
+}
+
+.infoCurr{
+    display: flex;
+    gap: 20px;
+}

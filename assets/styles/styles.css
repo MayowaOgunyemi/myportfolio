@@ -1,0 +1,759 @@
+/* Responsive styles here */
+@import url('mobile.css');
+@import url('tablet.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 18px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0D99FF; /* Set the color of the scrollbar thumb */
+    border-radius: 6px; /* Set the border-radius of the scrollbar thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #eee; /* Set the color of the scrollbar track */
+}
+
+/* Scroll to Top Button Styles */
+#scrollToTopBtn {
+    scroll-behavior: smooth;
+    display: none; /* Initially hide the button */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0d99ff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0066cc; /* Change the color on hover if desired */
+}
+
+/* styling for bigger screen */
+@media only screen and (min-width:769px) 
+{
+    .container-fluid{
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .container {
+        width: 1000px;
+        /* border: 1px solid red; */
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    body{
+        background-color: white;
+        margin: 0;
+        font-family: "Inter Tight", sans-serif;
+    }
+
+    .bgBlue{
+        background-color: #0D99FF;
+    }
+
+    .bgBlack{
+        background-color: #15141D;
+    }
+
+    /* The loader styling */
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(45deg, #ffffff, #ffffff);
+        z-index: 9999999;
+    }
+
+    #preloader #status {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    #preloader #status .d-loader {
+        width: 90px;
+        height: 90px;
+        position: relative;
+        margin: 100px auto;
+    }
+
+    /* The loader bounce animation */
+    @keyframes preloaderBounce {
+        0%, 20%, 50%, 80%, 100% {
+            transform: translateY(0);
+        }
+        40% {
+            transform: translateY(-30px);
+        }
+        60% {
+            transform: translateY(-15px);
+        }
+    }
+
+    #preloader #status .d-loader img {
+        width: 90px;
+        height: 90px;
+        position: relative;
+        margin: 100px auto;
+        animation: preloaderBounce 2s infinite linear;
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* navigation menu styling */
+    header {
+        background-color: #ffffff;
+        color: #15141D;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.08), 0px 0px 4px 0px rgba(0, 0, 0, 0.04);
+        z-index: 100;
+    }
+    
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+    
+    .navlogo {
+        text-align: center;
+        font-family: "Aeonik TRIAL";
+        font-size: 24px;
+        font-style: normal;
+        background-color: #0d99ff;
+        border-radius: 10px;
+        padding: 5px 10px;
+        color: white;
+        font-weight: 700;
+    }
+    
+    .nav-menu {
+        list-style: none;
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin-right: 30px;
+    }
+    
+    .nav-menu a {
+        text-decoration: none;
+        color: #15141D;
+    }
+
+    .nav-menu a:hover {
+        color: #0D99FF;
+    }
+
+    #navItems a{
+        font-weight: 600;
+    }
+
+    
+    .menuBtnBlue{
+        padding: 10px 20px;
+        background-color: #0D99FF;
+        border-radius: 10px;
+        font-weight: normal;
+    }
+
+    .menuBtnWhite{
+        padding: 10px 20px;
+        background-color: #ffffff;
+        color:#15141D;
+        border-radius: 10px;
+        border: 0.5px solid rgba(159, 159, 159, 0.50);
+        /* STROKED BUTTONS */
+        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.05);
+        font-weight: 600;
+    }
+
+    .menuBtn a{
+        color: #15141D;
+    }
+    
+    .hamburger {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+    }
+
+    #master-head.menu-fixed {
+        /* background: #ffffff; */
+        -webkit-box-shadow: 0 4px 15px -10px rgba(0,0,0,.6);
+        box-shadow: 0 4px 15px -10px rgba(0,0,0,.6);
+        position: fixed;
+        animation: slide-down 0.7s;
+        width:100%; 
+    }
+
+    /* Style for the new menu items */
+    .menu-right {
+        margin-left: auto; /* Pushes the menu items to the right */
+    }
+
+    .menu-right a {
+        /* color: #333; Change the color as needed */
+        text-decoration: none;
+        padding: 10px;
+        /* border: 1px solid #333; Add a border for better visibility */
+        /* border-radius: 5px; */
+    }
+
+    .menu-right a:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    main{
+        height: 100%;
+        width: 100%;
+    }
+
+    main #hero-page{
+        position: relative;
+        top: 6em;
+        background-color: #ffffff;
+        padding: 20px 20px;
+        margin-bottom: 30px;
+    }
+
+    #hero-page #heroContent{
+        display: flex;
+        width: 100%;
+        /* padding: 80px 80px 80px 80px; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #heroTitle, #heroText, #heroBtn{
+        width: 80%;
+        text-align: center;
+        /* margin-bottom: 22px; */
+    }
+
+    #heroTitle span{
+        color: #0D99FF;
+    }
+
+    #heroTitle h1{
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 72px;
+        margin: 10px 0px 10px 0;
+    }
+
+    #heroText p{
+        color: #4B5563;
+        /* text-align: center; */
+        /* font-family: Inter; */
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+
+    #heroBtn{
+        vertical-align: middle;
+        margin-right: auto;
+        margin-left: auto;
+        width: 40%;
+        vertical-align: middle;
+    }
+
+    #about-page{
+        display: flex;
+        /* width: 1440px; */
+        padding: 40px;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        /* gap: 40px; */
+        /* border: 1px solid red; */
+        /* height: 100px; */
+        position: relative;
+        top: 6em;
+        background: #F6F6F6;
+    }
+
+    #about-page #aboutText{
+        display: flex;
+        padding: 60px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        /* flex: 1 0 0; */
+        width: 50%;
+        border-radius: 20px 0px 0px 20px;
+        background: #FFF;
+        height: 600px;
+    }
+
+    #about-page #aboutImg{
+        display: flex;
+        padding: 40px 60px;
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        /* flex: 1 0 0; */
+        align-self: stretch;
+        width: 50%;
+        border-radius: 0px 20px 20px 0px;
+        background: #D7E7F2;
+    }
+
+    #aboutImg img{
+        flex: 1 0 0;
+        align-self: stretch;
+        border-radius: 10px;
+        background-color: lightgray;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    #aboutTitle h2{
+        color: var(--Text-Primary, #15141D);
+        /* text-align: center; */
+        font-family: "Aeonik TRIAL";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+        align-self: stretch;
+    }
+
+    #aboutSmallTitle p{
+        color: var(--Text-secondary, #737678);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px; /* 133.333% */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin: 0;
+        align-self: stretch;
+    }
+
+    #aboutMsg{
+        color: #4B5563;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 175% */
+    }
+
+
+
+    /* styles for project div */
+    #project{
+        padding: 0px 40px 80px 40px;
+        /* width: 100%; */
+        background-color: #f6f6f6;
+        position: relative;
+        top: 6em;   
+    }
+
+    #projectHead{
+        height: 100px;
+        display: flex;
+        /* width: 1360px; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+        /* gap: 10px; */
+    }
+
+    #projectHeadCaption p{
+        color: var(--Text-secondary, #737678);
+        font-family: Inter;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px; /* 133.333% */
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+    }
+
+    #projectHeadTitle p{
+        color: var(--Text-Primary, #15141D);
+        text-align: center;
+        font-family: "Aeonik TRIAL";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    #projectBody{
+        display: flex;
+        gap: 10px;
+    }
+
+    #forecasterBody, #currencyBody{
+        display: flex;
+        width: 50%;
+        height: 464px;
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background: #FFF;
+    }
+
+    #forecasterBody p, #currencyBody p{
+        color: var(--Text-Primary, #15141D);
+        text-align: center;
+        font-family: "Aeonik TRIAL";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54px; /* 112.5% */
+        align-self: stretch;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    #forecastBtn a, #currencyBtn a{
+        height: 40px;
+        padding: 8px 16px;
+    }
+
+    #forecastImg img, #currencyImg img{
+        height: 300px;
+        box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    #academic{
+        display: flex;
+        /* width: 1440px; */
+        height: 477px;
+        padding: 0px 112.5px;
+        /* flex-direction: column; */
+        align-items: center;
+        flex-shrink: 0;
+        gap: 40px;
+        position: relative;
+        top: 6em;
+    }
+
+    #school, #workExp{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    #schTitle p, #workTitle p{
+        color: #030712;
+        /* text-align: center; */
+        font-family: "Aeonik TRIAL";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 54px; /* 112.5% */
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    #schBody h3, #workBody h3{
+        color: #000;
+        font-family: Inter;
+        font-size: 23.438px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26.4px; /* 112.64% */
+        margin: 0;
+    }
+
+    #schBody p, #workBody p{
+        color: rgba(21, 20, 29, 0.60);
+        font-family: Inter;
+        font-size: 15.625px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20.8px; /* 133.12% */
+        margin: 0;
+    }
+
+    .line{
+        background: #E5E5E5;
+        height: 1px;
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
+
+    #schBody .schYear, #workBody .exPYear{
+        float: right;
+    }
+
+    #testimonial{
+        display: flex;
+        /* width: 1440px; */
+        padding: 79.5px 0px 45.5px 0px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 60px;
+        background-color: #f6f6f6;
+        position: relative;
+        top: 6em;
+    }
+    
+    #testimonialHead p{
+        color: var(--Text-Primary, #15141D);
+        text-align: center;
+        font-family: "Aeonik TRIAL";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 72px; /* 150% */
+        margin: 0;
+    }
+
+    #testimonialBody{
+        /* width: 1836px; */
+        height: 431px;
+        display: flex;
+        gap: 10px;
+    }
+
+    #body1, #body3{
+        display: flex;
+        width: 444px;
+        height: 100%;
+        padding: 20px;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-radius: 20px;
+        opacity: 0.4;
+        background: var(--Text-Secondary, #FFF);
+        gap: 20px;
+    }
+
+    #body2{
+        display: flex;
+        width: 444px;
+        height: 100%;
+        padding: 20px;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-radius: 20px;
+        /* opacity: 0.4; */
+        background: var(--Text-Secondary, #FFF);
+        margin-top: -20px;
+        gap: 20px;
+    }
+
+    #testimonialArrow{
+        display: flex;
+        padding: 8px 10px;
+        align-items: center;
+        gap: 30px;
+        border-radius: 100px;
+        background: var(--Background-white, #FFF);
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .bodyQuote{
+        width: 100px;
+        height: 100px;
+    }
+
+    #testimonialBody p{
+        color: var(--Text-Primary, #15141D);
+        font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px; /* 133.333% */
+        letter-spacing: -0.72px;
+        margin: 0;
+        margin-bottom: 140px;
+    }
+
+    #testimonialBody span{
+        color: var(--Text-secondary, #737678);
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px; /* 114.286% */
+    }
+
+    #contact{
+        position: relative;
+        top: 6em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+        gap: 24px;
+        background-color: #f6f6f6;
+    }
+
+    #contactHead{
+        margin-bottom: 24px;
+    }
+
+    #contentTitle #contentTitleHead{
+        display: flex;
+        padding: 6px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+        border-radius: 8px;
+        background: #FFF;
+        box-shadow: 0px 0px 0px 1px #EBEBEB, 0px 1px 3px 0px rgba(143, 143, 143, 0.20);
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    #contentTitle{
+        gap: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contactHead h1{
+        color: var(--Text-Primary, #15141D);
+        text-align: center;
+        font-family: "Aeonik TRIAL";
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px; /* 116.667% */
+        margin: 0;
+        margin-bottom: 16px;
+    }
+
+    #contentTitle #contactCaption{
+        color: #4B5563;
+        text-align: center;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+
+    #contactBody{
+        width: 594px;
+        height: 543px;
+        border-radius: 8px;
+        background: var(--Light-Backgrounds-bg-base, #FFF);
+        box-shadow: 0px 2px 24px 0px rgba(3, 7, 18, 0.08), 0px 16px 32px 0px rgba(3, 7, 18, 0.08), 0px 0px 0px 1px rgba(3, 7, 18, 0.08), 0px 0px 0px 2px rgba(229, 231, 235, 0.40) inset, 0px 0px 0px 1px #FFF inset;
+        padding: 30px;
+        margin-bottom: 50px;
+    }
+
+    #formBtn{
+        display: flex;
+        width: 593px;
+        padding: 16px 32px 24px 0px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        gap: 8px;
+    }
+
+    #formBtn button{
+        display: flex;
+        height: 40px;
+        padding: 10px;
+        align-items: center;
+        gap: 8px;
+        border-radius: 10px;
+        background: #0D99FF;
+        color: white;
+        border: none;
+        font-family: "Inter";
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #formName, #subject, #messageBody{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    #formName label, #subject label, #messageBody label{
+        color: #0D062D;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+        margin-bottom: 8px;
+    }
+
+    form input, textarea{
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid var(--Light-Borders-border-base, #E5E7EB);
+        background: var(--Light-Backgrounds-bg-field, #F9FAFB);
+
+        /* Light/Buttons/neutral */
+        box-shadow: 0px 0.5px 0px 0px rgba(3, 7, 18, 0.16), 0px 0.25px 0px 0px rgba(3, 7, 18, 0.16);
+    }
+
+    footer{
+        position: relative;
+        top: 6em;
+        height: 30px;
+        flex-shrink: 0;
+        background: var(--Background-Green-Dark, #0D1F23);
+        padding: 20px;
+        text-align: center;
+    }
+
+    #footerContent p{
+        color: #CFD0D0;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        /* margin: 0; */
+    }    
+}

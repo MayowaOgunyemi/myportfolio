@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="theme-color" content="#ffffff">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="forecaster.css">
+        <link rel="stylesheet" href="../assets/styles/styles.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/4bd65683c5.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+    </head>
+    <body>
+        <div id="preloader" style="display: block;">
+            <div id="status" style="display: block;">
+                <div class="d-loader">
+                    <div class="navlogo">M.O</div>
+                </div>
+            </div>
+        </div>
+        <header id="master-head" class="headnav menu-fixed">
+            <div class="container-fluid">
+                <nav>
+                    <div class="navlogo">M.O</div>
+                    <div id="navItems">
+                        <ul class="nav-menu">
+                            <li><a href="https://22014494-portfolio.000webhostapp.com/">Home</a></li>
+                            <li><a href="../currency-converter/index.html">Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div id="nav2Btns">
+                        <ul class="nav-menu">
+                            <!-- New Menu Items -->
+                            <li class="menu-right"><a href="javascript:void(0);" onclick="scrollToSection('contact')" class="menuBtnBlue" style="color: white">Get in touch <i class="fa-solid fa-arrow-right"></i></a></li>
+                            <li class="menuBtn menu-right"><a href="https://docs.google.com/document/d/1_USCfqlHWQzrLUJv0i4HM0PCZzvtVTio/edit?usp=sharing&ouid=112790365343595658297&rtpof=true&sd=true" class="menuBtnWhite">Read CV <i class="fa-solid fa-arrow-right"></i></a></li>
+                            <!-- End of New Menu Items -->
+                        </ul>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="main_div">
+                <p id="mode_text">Historical Mode</p>
+                <div id="mode_btn_div">
+                    <button id="mode_btn">Forecast Mode</button>
+                </div>
+        
+                <br>
+    
+                <canvas id="forecasterChart"></canvas>
+    
+                <br>
+                <br>
+    
+                <div class="error-message"></div>
+                
+                <div class="flex-box-btn">
+                    <button id="previous">Previous</button>
+                    <button id="next">Next</button>
+                </div>
+            </div>
+            
+        </main>
+
+        <!-- beginning of footer -->
+        <footer>
+            <div id="footerContent">
+                <p> &copy; Mayowa O. Ogunyemi | o014494m@student.staffs.co.uk </p>
+            </div>
+        </footer>
+        <!-- end of footer -->
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></button>
+
+        <!-- my external javascript -->
+        <script src="forecaster_script.js"></script>
+        <script src="../assets/scripts/app.js"></script>
+    </body>
+</html>
